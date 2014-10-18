@@ -40,4 +40,3 @@ for line in sys.stdin:
 	if keyv is '\t':
 		continue
 	print keyv
-
