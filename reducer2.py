@@ -16,10 +16,7 @@ def ban(word):
 		res += '*'
 	res += word[-1]
 	return res
-
-def banwy(word):
-	return word[0] + ('*' * (len(word) - 2)) + word[-1]
-
+	
 for line in sys.stdin:
 	try:
 		line = line.replace('\n', '')
@@ -39,7 +36,7 @@ for line in sys.stdin:
 		for word in words:
 			lword = word.lower()
 			if lword in banlist:
-				newtext += banwy(word) + ' '
+				newtext += ban(word) + ' '
 			else:
 				newtext += word + ' '
 			s = scoretable.get(lword)
