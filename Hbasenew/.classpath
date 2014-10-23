@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="/Users/Kobe/Downloads/hadoop-core-1.0.3.jar"/>
+	<classpathentry kind="lib" path="/Users/Kobe/Downloads/hbase-0.92.1.jar"/>
+	<classpathentry kind="lib" path="/Users/Kobe/Downloads/commons-configuration-1.6.jar"/>
+	<classpathentry kind="lib" path="/Users/Kobe/Downloads/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/Kobe/Downloads/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/Kobe/Downloads/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/Users/Kobe/Downloads/slf4j-api-1.7.4.jar"/>
+	<classpathentry kind="lib" path="/Users/Kobe/Downloads/slf4j-log4j12-1.7.4.jar"/>
+	<classpathentry kind="lib" path="/Users/Kobe/Downloads/zookeeper-3.4.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

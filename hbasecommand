@@ -1,11 +1,13 @@
 curl -O https://people.apache.org/~jdcryans/word_count.csv https://people.apache.org/~jdcryans/word_count.csv
 
-create 'twitterdata', {NAME => 'family'}, {SPLITS => ['point']}
+hadoop fs -put <src_data_dir> <dir_in_hdfs>
+
+create 'twitterdata', {NAME => 'family', VERSION => 100}
+
 
 hadoop jar hbase-0.94.6-cdh4.3.0-security.jar importtsv -Dimporttsv.separator='\t' -Dimporttsv.bulk.output=output -Dimporttsv.columns=HBASE_ROW_KEY,HBASE_ROW_KEY,family:tweet_id,family:sentiment,family:tweet twitterdata out
-bin/hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.bulk.output=output -Dimporttsv.columns=family:user_id,family:timestring,HBASE_ROW_KEY,family:sentiment,family:tweet twitterdata out
+bin/hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.columns=HBASE_ROW_KEY,family:tweet_id,family:sentiment,family:tweet twitterdata3 /out-part-00000
 // 不加output选项可以直接输出到hbase中，否则输出到hdfs中
-
 
 
 put 'twitterdata', 'row1', 'family:user_id', '1234567890'
